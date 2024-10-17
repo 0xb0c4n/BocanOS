@@ -1,4 +1,4 @@
-# Mon Système d'Exploitation
+# BocanOS
 
 Ce projet est un exemple de système d'exploitation simple. Il utilise un fichier en assembleur pour générer un fichier binaire, et un fichier d'image de disquette (floppy) pour l'exécuter dans un émulateur.
 
