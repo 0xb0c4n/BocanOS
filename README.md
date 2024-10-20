@@ -21,6 +21,5 @@ sudo apt-get install nasm qemu-system-x86 make
 
 Exécutez ensuite ces commandes :
 ```bash
-make
-qemu-system-i386 -fda build/main_floppy.img
+./run.sh
 ```
