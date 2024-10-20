@@ -8,6 +8,7 @@
 
 #define BACKSPACE 0x0E
 #define ENTER 0x1C
+#define TAB 0x0F
 
 static char key_buffer[256];
 
@@ -21,7 +22,7 @@ const char *sc_name[] = {"ERROR", "Esc", "1", "2", "3", "4", "5", "6",
                          "!", "RShift", "Keypad *", "LAlt", "Spacebar"};
 const char sc_ascii[] = {'?', '?', '1', '2', '3', '4', '5', '6',
                          '7', '8', '9', '0', '-', '=', '?', '?', 'a', 'z', 'e', 'r', 't', 'y',
-                         'u', 'i', 'o', 'p', '[', ']', '?', '?', 'q', 's', 'd', 'f', 'g',
+                         'u', 'i', 'o', 'p', '^', '$', '?', '?', 'q', 's', 'd', 'f', 'g',
                          'h', 'j', 'k', 'l', 'm', '\'', '`', '?', '\\', 'w', 'x', 'c', 'v',
                          'b', 'n', ',', ',', '.', '/', '?', '?', '?', ' '};
 
@@ -32,6 +33,9 @@ static void keyboard_callback(registers_t *regs) {
         if (backspace(key_buffer)) {
             print_backspace();
         }
+    } else if(scancode == TAB) {
+        append(key_buffer, '\t');
+        print_string("    ");
     } else if (scancode == ENTER) {
         print_nl();
         execute_command(key_buffer);

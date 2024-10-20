@@ -26,6 +26,7 @@ void start_kernel() {
     print_string("88~~~b. 88    88 8b      88~~~88 88 V8o88      88    88   `Y8b.\n");
     print_string("88   8D `8b  d8' Y8b  d8 88   88 88  V888      `8b  d8' db   8D\n");
     print_string("Y8888P'  `Y88P'   `Y88P' YP   YP VP   V8P       `Y88P'  `8888Y'\n\n");
+    
     print_string("Welcome to Bocan OS 1.0.0 ! \n\n");
     print_string("> ");
 }
