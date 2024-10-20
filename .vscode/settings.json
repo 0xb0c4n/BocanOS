@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.asm": "wat",
+        "isr.h": "c",
+        "idt.h": "c"
+    }
+}

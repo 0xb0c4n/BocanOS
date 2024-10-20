@@ -21,5 +21,5 @@ sudo apt-get install nasm qemu-system-x86 make
 
 Exécutez ensuite ces commandes :
 ```bash
-./run.sh
+make
 ```
