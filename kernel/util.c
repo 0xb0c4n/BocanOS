@@ -55,3 +55,24 @@ int compare_string(char s1[], char s2[]) {
     }
     return s1[i] - s2[i];
 }
+
+int contient_mot(const char* chaine, const char* mot) {
+    int i = 0, j = 0;
+
+    while (chaine[i] != '\0') {
+        if (chaine[i] == mot[j]) {
+            int k = i;
+            while (chaine[k] == mot[j] && mot[j] != '\0') {
+                k++;
+                j++;
+            }
+            if (mot[j] == '\0') {
+                return 1; 
+            }
+            j = 0; 
+        }
+        i++;
+    }
+
+    return 0;
+}

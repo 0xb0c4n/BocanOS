@@ -2,6 +2,8 @@
     "files.associations": {
         "*.asm": "wat",
         "isr.h": "c",
-        "idt.h": "c"
+        "idt.h": "c",
+        "network.C": "cpp",
+        "mem.h": "c"
     }
 }

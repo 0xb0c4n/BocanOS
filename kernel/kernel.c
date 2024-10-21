@@ -31,6 +31,13 @@ void start_kernel() {
     print_string("> ");
 }
 
+char* skip_spaces(char* str) {
+    while (*str == ' ') {
+        str++;
+    }
+    return str;
+}
+
 void execute_command(char *input) {
     if (compare_string(input, "exit") == 0) {
         asm volatile("hlt");
@@ -39,7 +46,13 @@ void execute_command(char *input) {
     } else if (compare_string(input, "clear") == 0) {
         clear_screen();
         print_string("\n> ");
+    } else if (contient_mot(input, "echo ")) {
+        input = skip_spaces(input + 4);
+        print_string(input);
+        print_string("\n> ");
     } else {
+        print_string(input);
+        print_string(" : Commande inconnue");
         print_string("\n> ");
     }
 }
